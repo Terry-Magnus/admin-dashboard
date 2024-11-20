@@ -18,7 +18,7 @@ import ActivityIcon from "../assets/icons/activity";
 import UsersIcon from "../assets/icons/users";
 import BagIcon from "../assets/icons/bag";
 import { StatsProps } from "../components/home/types";
-import StatsCard from "../components/StatsCard";
+import StatsCard from "../components/home/StatsCard";
 import { useState } from "react";
 import { MoreHoriz } from "@mui/icons-material";
 import TrashIcon from "../assets/icons/trash";
@@ -30,7 +30,7 @@ import donut_purple from "../assets/images/donut-purple.png";
 import donut_green from "../assets/images/donut-green.png";
 import map from "../assets/images/map.png";
 import { menuStyle, customer_list, foods } from "../components/home/extras";
-import Person from "../components/Person";
+import Person from "../components/home/Person";
 
 const cards: StatsProps[] = [
   {
