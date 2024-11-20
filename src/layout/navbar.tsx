@@ -9,7 +9,7 @@ import {
 import SearchIcon from "../assets/icons/search";
 import { MailOutlined, NotificationsOutlined } from "@mui/icons-material";
 import avatar from "../assets/images/avatar.png";
-import Person from "../components/Person";
+import Person from "../components/home/Person";
 
 const Navbar = () => {
   return (
