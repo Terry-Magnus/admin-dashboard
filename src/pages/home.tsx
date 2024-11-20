@@ -59,7 +59,7 @@ const Home = () => {
   const [anchorEl, setAnchorEl] = useState<any>(null);
   const [value, setValue] = useState("all");
 
-  const handleChange = (e: React.SyntheticEvent, newValue: string) => {
+  const handleChange = (newValue: string) => {
     setValue(newValue);
   };
 
@@ -282,7 +282,7 @@ const Home = () => {
             Menu
           </Typography>
           <Tabs
-            onChange={handleChange}
+            onChange={(_, newValue: string) => handleChange(newValue)}
             value={value}
             textColor="primary"
             indicatorColor="primary"
