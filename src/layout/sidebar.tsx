@@ -79,7 +79,7 @@ const Sidebar = () => {
                 variant={isActive ? "contained" : "text"}
                 key={link.path}
                 startIcon={link.icon({
-                  customcolor: isActive ? "#fff" : "secondary.light",
+                  customcolor: isActive ? "#fff" : "#8F95B2",
                 })}
               >
                 {link.name}

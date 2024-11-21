@@ -29,7 +29,12 @@ import donut_main from "../assets/images/graph-total.png";
 import donut_purple from "../assets/images/donut-purple.png";
 import donut_green from "../assets/images/donut-green.png";
 import map from "../assets/images/map.png";
-import { menuStyle, customer_list, foods } from "../components/home/extras";
+import {
+  menuStyle,
+  customer_list,
+  foods,
+  badges,
+} from "../components/home/extras";
 import Person from "../components/home/Person";
 
 const cards: StatsProps[] = [
@@ -143,7 +148,7 @@ const Home = () => {
             </Box>
             <Divider />
             <CardContent sx={{ p: "24px 24px 35px 24px" }}>
-              <Stack>
+              <Stack mb="50px">
                 <Typography fontSize={32} fontWeight={700}>
                   $112,340
                 </Typography>
@@ -151,7 +156,21 @@ const Home = () => {
                   <img src={chart} />
                 </Box>
               </Stack>
-              <Box></Box>
+              <Box display="flex" gap="10px" alignItems="center">
+                {badges.slice(0, 3).map((badge) => (
+                  <>
+                    <Box
+                      sx={{
+                        background: `${badge.bgcolor}`,
+                        width: "12px",
+                        height: "12px",
+                        borderRadius: "4px",
+                      }}
+                    ></Box>
+                    <Typography variant="body1">{badge.name}</Typography>
+                  </>
+                ))}
+              </Box>
             </CardContent>
           </Card>
         </Box>
@@ -177,42 +196,64 @@ const Home = () => {
               </IconButton>
             </Box>
             <Divider />
-            <CardContent
-              sx={{
-                p: "24px",
-                display: "flex",
-                alignItems: "center",
-                gap: "30px",
-              }}
-            >
-              <Box width="200px">
-                <img src={donut_main} width="100%" />
-              </Box>
+            <CardContent>
+              <Box
+                sx={{
+                  p: "24px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "30px",
+                }}
+              >
+                <Box width="200px">
+                  <img src={donut_main} width="100%" />
+                </Box>
 
-              <Stack spacing={5}>
-                <Box display="flex" alignItems="center">
-                  <img src={donut_purple} />
-                  <Box ml={3}>
-                    <Typography fontWeight={700} fontSize={14}>
-                      +18%
-                    </Typography>
-                    <Typography variant="subtitle2" fontSize={12}>
-                      Daily customers
-                    </Typography>
+                <Stack spacing={5}>
+                  <Box display="flex" alignItems="center">
+                    <img src={donut_purple} />
+                    <Box ml={3}>
+                      <Typography fontWeight={700} fontSize={14}>
+                        +18%
+                      </Typography>
+                      <Typography variant="subtitle2" fontSize={12}>
+                        Daily customers
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
-                <Box display="flex" alignItems="center">
-                  <img src={donut_green} />
-                  <Box ml={3}>
-                    <Typography fontWeight={700} fontSize={14}>
-                      +14%
-                    </Typography>
-                    <Typography variant="subtitle2" fontSize={12}>
-                      Weekly new customers
-                    </Typography>
+                  <Box display="flex" alignItems="center">
+                    <img src={donut_green} />
+                    <Box ml={3}>
+                      <Typography fontWeight={700} fontSize={14}>
+                        +14%
+                      </Typography>
+                      <Typography variant="subtitle2" fontSize={12}>
+                        Weekly new customers
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
-              </Stack>
+                </Stack>
+              </Box>
+              <Box
+                display="flex"
+                gap="10px"
+                justifyContent="center"
+                alignItems="center"
+              >
+                {badges.slice(3, 5).map((badge) => (
+                  <>
+                    <Box
+                      sx={{
+                        background: `${badge.bgcolor}`,
+                        width: "12px",
+                        height: "12px",
+                        borderRadius: "10px",
+                      }}
+                    ></Box>
+                    <Typography variant="body1">{badge.name}</Typography>
+                  </>
+                ))}
+              </Box>
             </CardContent>
           </Card>
         </Box>

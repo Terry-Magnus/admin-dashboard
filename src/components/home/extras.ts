@@ -102,3 +102,26 @@ export const foods = [
     width: "25%",
   },
 ];
+
+export const badges = [
+  {
+    bgcolor: "linear-gradient(283.95deg, #0049C6 -12.57%, #CDF4FF 126.88%)",
+    name: "Pending (10%)",
+  },
+  {
+    bgcolor: "linear-gradient(135deg, #FFB7F5 0%, #6C5DD3 100%)",
+    name: "Income",
+  },
+  {
+    bgcolor: "linear-gradient(333.01deg, #FF754C -23.54%, #FFB7F5 173.81%)",
+    name: "Expance",
+  },
+  {
+    bgcolor: "linear-gradient(333.01deg, #667EFE -23.54%, #FFB7F5 173.81%)",
+    name: "Current customers",
+  },
+  {
+    bgcolor: "linear-gradient(283.95deg, #A3CB31 -12.57%, #CDF4FF 126.88%)",
+    name: "New customers",
+  },
+];
